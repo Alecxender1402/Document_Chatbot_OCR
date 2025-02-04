@@ -12,3 +12,6 @@ google-cloud-aiplatform>=1.38
 google-generativeai
 ipykernel
 InstructorEmbedding
+pytesseract
+pypdfium2
+matplotlib

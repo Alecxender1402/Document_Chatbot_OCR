@@ -77,13 +77,12 @@ def get_chunks(text):
     return chunks
 
 def get_vectorstore(text_chunks):
-    # Use HuggingFaceInstructEmbeddings without the 'token' argument
     embeddings = GoogleGenerativeAIEmbeddings(model="models/embedding-001")
     vectorstore = FAISS.from_texts(texts=text_chunks, embedding=embeddings)
     return vectorstore
 
 def get_conversion_chain(vectorstore):
-    chat = ChatGroq(temperature=0.7, groq_api_key="YOUR_API_KEY", model_name="llama-3.3-70b-versatile")
+    chat = ChatGroq(temperature=0.7, groq_api_key="your_api_key", model_name="llama-3.3-70b-versatile")
 
     memory = ConversationBufferMemory(
         memory_key='chat_history',
@@ -139,8 +138,8 @@ def main():
                 raw_text = ""
 
                 for pdf in pdf_docs:
-                    pdf_bytes = pdf.read()  # Read the uploaded file as bytes
-                    pdf_io = BytesIO(pdf_bytes)  # Convert bytes to file-like object
+                    pdf_bytes = pdf.read()  
+                    pdf_io = BytesIO(pdf_bytes)  
                     
                     # Convert PDF to images
                     images.extend(convert_pdf_to_images(pdf_io))  
