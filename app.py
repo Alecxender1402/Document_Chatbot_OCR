@@ -81,7 +81,7 @@ def get_vectorstore(text_chunks):
 def get_conversion_chain(vectorstore):
     chat = ChatGroq(
         temperature=0.7,
-        groq_api_key="api_key",
+        groq_api_key=os.getenv('GROQ_API_KEY'),
         model_name="llama-3.3-70b-versatile"
     )
     memory = ConversationBufferMemory(
