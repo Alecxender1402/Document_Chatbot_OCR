@@ -15,8 +15,8 @@ from langchain_groq import ChatGroq
 import base64
 
 # Configure Tesseract path (Windows)
-pytesseract.pytesseract.tesseract_cmd = r'C:\Program Files\Tesseract-OCR\tesseract.exe'
-POPPLER_PATH = r'C:\Program Files\poppler-24.08.0\Library\bin'
+pytesseract.pytesseract.tesseract_cmd = os.environ.get("TESSERACT_CMD", "/usr/bin/tesseract")
+POPPLER_PATH = os.environ.get("POPPLER_PATH", "/usr/bin")
 
 load_dotenv()
 os.getenv("GOOGLE_API_KEY")

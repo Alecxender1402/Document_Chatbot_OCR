@@ -14,4 +14,3 @@ ipykernel
 InstructorEmbedding
 pytesseract
 pypdfium2
-matplotlib
