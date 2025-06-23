@@ -1,4 +1,4 @@
-# DocuChat - Open Source Document Assistant 📄
+# DocuChat - Document Assistant 📄
 
 DocuChat is an AI-powered document assistant that allows you to upload PDF documents and interact with them through natural language queries. Built with Streamlit and leveraging state-of-the-art AI models from Groq and Google, it combines text extraction with OCR capabilities to handle both digital and scanned documents.
 
