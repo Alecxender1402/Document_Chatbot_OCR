@@ -38,7 +38,7 @@ pip install -r requirement.txt
 ### Usage 🚀
 1. Start the app:-
 ```bash
-streamlit run test2.py
+streamlit run app.py
 ```
 2. Upload PDF documents through the sidebar
 3. Click "Process" to analyze documents
