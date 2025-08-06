@@ -154,7 +154,7 @@ def process_pdf_with_logs(pdf_file, log_area):
 
 def main():
     st.set_page_config(page_title="DocuChat", page_icon="📄", layout="wide")
-    st.title("DocuChat - PDF Q&A with Logs")
+    st.title("DocuChat - PDF Q&A Assistant")
 
     with st.sidebar:
         st.header("Upload & Process")
